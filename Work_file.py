@@ -104,27 +104,35 @@ print(current_user.get_login_and_pasword())
 print('-----------------------------------------')
 #-------------------------------------------------
 class Human_2_2:
-    def __init__(self, name , age):
-        self.name = name
+    def __init__(self, age):
         self.age = age
     def say_hello(self):
-        print('Hello, I im {}'.format(self.name))
         print(f'My age is {self.age}')
 
 class HumanExtended(Human_2_2):
-    pass
+    def __init__(self, name, age):
+        super().__init__(age) # ----------Підключаємо аргументи батьківського класу
+        self.name = name
 
-human_2_3 = Human_2_2(
-    name='Ivan',
-    age=42
-)
-
-human_2_3.say_hello()
+    def say_hello(self):
+        print(f'My name is {self.name} and  my age is {self.age} ')
 
 human_2_4 = HumanExtended(
     name = 'Viktor',
     age = 40
 )
-
-print(human_2_4.name, human_2_4.age)
 print('---------------------------------------')
+human_2_4.say_hello()
+print('---------------------------------------')
+
+#------------------------------------------------- Множинне наслідування класів
+class Doctor:
+    def can_cure(self):
+        print('я лікар, я вмію лікувати')
+
+class Architekt:
+    def cun_build(self):
+        print('я архітектор, я вмію будувати')
+
+
+class Person(Doctor, Architekt):
