@@ -135,4 +135,4 @@ class Architekt:
         print('я архітектор, я вмію будувати')
 
 
-class Person(Doctor, Architekt):
+# class Person(Doctor, Architekt):
