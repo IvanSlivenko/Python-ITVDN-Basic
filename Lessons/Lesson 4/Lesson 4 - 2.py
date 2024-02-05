@@ -2,6 +2,7 @@ class Parser:
     def __init__(self):
         pass
 
+    @staticmethod # ---------------------- декоратор статичного методу
     def __convert_type(value_str):
         result = 0
         if isinstance(value_str, str):
@@ -42,3 +43,7 @@ class Core:
         a, b, op = self.parser.parse(expressoin)
         result = self._function.get(op)(a, b)
         return result
+
+if __name__ == "__main__":
+    calculator = Interfase()
+    calculator.run_calculator()
