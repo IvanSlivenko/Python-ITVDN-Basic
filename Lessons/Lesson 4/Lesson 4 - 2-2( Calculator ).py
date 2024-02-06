@@ -1,7 +1,7 @@
 class Parser: # ------------------------------- Механізми перетворення стічок у число
     def __init__(self):
         pass
-    @staticmethod
+    @staticmethod#--------------------------------------- Декоратор статичних методів
     def __converter_type(value_str):
         result = 0
         if isinstance(value_str, str):
