@@ -56,3 +56,26 @@ print(matrix)
 flatten_matrix = [val for sublist in matrix for val in sublist ]
 print(flatten_matrix)
 
+#------------------------------------------------------------------------ Example 10
+def func(index, count):
+    return {
+        "ID": index,
+        "values": ["{}_{}".format(index,value) for value in range(count)]
+    }
+r = func(1,3)
+print(r)
+print('-' * 60)
+#------------------------------------------------------------------------ Example 11
+def generate(count):
+    return [func(i, j) for i,j in zip(range(count),list(range(count))[::-1])]
+
+r_2 = generate(10)
+print(r_2)
+print('-'*50)
+
+#------------------------------------------------------------------------ Example 12
+f = [value for sublist in r_2 for value in sublist['values']]
+print(f)
+
+
+
