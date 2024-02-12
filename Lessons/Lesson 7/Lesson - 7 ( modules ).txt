@@ -5,4 +5,5 @@ itertools
 re
 datatime
 
-15 : 15
+25 : 18
+
