@@ -5,5 +5,15 @@ itertools
 re
 datatime
 
-25 : 18
+
+
+my_module
+1. new-Python Package
+2.rename = my_module
+3.new file = "hello py"
+
+
+
+
+37 : 28
 
