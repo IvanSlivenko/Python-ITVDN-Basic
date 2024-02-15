@@ -1,5 +1,6 @@
 import collections
 import itertools
+import random
 
 string = "blue car is parked right behind the blue building with wals and red door"
 
@@ -27,9 +28,9 @@ def process(text):
     # print('counts :', counts)
     max_count_word = get_max_count_word(counts) #----------- Рахуємо максимальну кількість разів, які зустрічається кожне слово
     max_count_word_combinations = get_max_count_word_combinations(words, max_count_word)
-    # return max_count_words
-    return max_count_word_combinations
+    random_combination = max_count_word_combinations[random.randint(0,len(max_count_word_combinations)-1)]
 
+    return random_combination
 rc = process(string)
 print(rc)
 
